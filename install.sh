@@ -10,19 +10,19 @@ mkdir -p ~/.config/nvim
 
 # Install nvim and its dependencies
 echo '[*] Using Homebrew to install Neovim and its dependencies ...'
-brew install neovim
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-pip install neovim
+#brew install neovim
+#brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+#pip install neovim
 
 # Install vim-plug plugin manager
 echo '[*] Downloading vim-plug ...'
 git clone https://github.com/k-takata/minpac.git ~/.vim/pack/minpac/opt/minpac
 
 # Install a nerd font for icons and a beautiful airline bar
-echo "[*] Installing patched font ..."
-brew cask install font-firacode-nerd-font
+#echo "[*] Installing patched font ..."
+#brew cask install font-firacode-nerd-font
 
-# Enter Neovim and install plugins using a temporary init.vim, which avoids 
+# Enter Neovim and install plugins using a temporary init.vim, which avoids
 # warnings about missing colorschemes, functions, etc
 echo -e '[*] Running :PlugInstall within nvim ...'
 sed '/command! PackStatus/q' init.vim > ~/.config/nvim/init.vim
